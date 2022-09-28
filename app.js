@@ -1,10 +1,11 @@
 
 const telegramApi = require('node-telegram-bot-api');
+require('dotenv').config();
 const { а, б, в, г, д, е, ж, з, и, й, к, л, м, н, о, п, р, с, т, у, ф, х, ч, ш, ь, ю, я } = require('./letters');
 
 const token = '5609303240:AAFoRCmKR10ZfCso_LW5UED0VR2JiVfdhWk'
 
-const bot = new telegramApi(token, { polling: true });
+const bot = new telegramApi(process.env.token, { polling: true });
 
 var ukraineEmoji = '🇺🇦';
 var emojiSentence = '';
